@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Notes: Codable {
+    let noteTitle: String
+    let noteTextViewText: String
+    let noteDate: String
+}
