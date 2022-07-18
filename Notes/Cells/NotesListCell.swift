@@ -28,5 +28,4 @@ class NotesListCell: UITableViewCell {
         self.noteTitle.text = notes.noteTitle
         self.dateOfCreation.text = notes.noteDate
     }
-    
 }
