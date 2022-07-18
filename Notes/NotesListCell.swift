@@ -8,6 +8,10 @@
 import UIKit
 
 class NotesListCell: UITableViewCell {
+    
+    @IBOutlet weak var noteTitle: UILabel!
+    @IBOutlet weak var dateOfCreation: UILabel!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +22,11 @@ class NotesListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setCellElements(notes: Notes) {
+        self.noteTitle.text = notes.noteTitle
+        self.dateOfCreation.text = notes.noteTitle
     }
     
 }
