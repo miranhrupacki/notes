@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8ACD6D142885D5A2001CFD60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD6D132885D5A2001CFD60 /* AppDelegate.swift */; };
 		8ACD6D162885D5A2001CFD60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD6D152885D5A2001CFD60 /* SceneDelegate.swift */; };
-		8ACD6D182885D5A2001CFD60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD6D172885D5A2001CFD60 /* ViewController.swift */; };
+		8ACD6D182885D5A2001CFD60 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD6D172885D5A2001CFD60 /* NotesViewController.swift */; };
 		8ACD6D1B2885D5A2001CFD60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACD6D192885D5A2001CFD60 /* Main.storyboard */; };
 		8ACD6D1D2885D5A3001CFD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACD6D1C2885D5A3001CFD60 /* Assets.xcassets */; };
 		8ACD6D202885D5A3001CFD60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACD6D1E2885D5A3001CFD60 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,9 @@
 		8ACD6D452885D64D001CFD60 /* NotesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD6D432885D64D001CFD60 /* NotesListCell.swift */; };
 		8ACD6D462885D64D001CFD60 /* NotesListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACD6D442885D64D001CFD60 /* NotesListCell.xib */; };
 		8ACD6D482885D8C6001CFD60 /* NoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD6D472885D8C6001CFD60 /* NoteDetailsViewController.swift */; };
+		8ACD6D4B2886001E001CFD60 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD6D4A2886001E001CFD60 /* NotesManager.swift */; };
+		8ACD6D4E2886003C001CFD60 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD6D4D2886003C001CFD60 /* Notes.swift */; };
+		8ACD6D512886005F001CFD60 /* AddNewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACD6D502886005F001CFD60 /* AddNewNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +45,7 @@
 		8ACD6D102885D5A2001CFD60 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ACD6D132885D5A2001CFD60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ACD6D152885D5A2001CFD60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8ACD6D172885D5A2001CFD60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8ACD6D172885D5A2001CFD60 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		8ACD6D1A2885D5A2001CFD60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8ACD6D1C2885D5A3001CFD60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8ACD6D1F2885D5A3001CFD60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +58,9 @@
 		8ACD6D432885D64D001CFD60 /* NotesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListCell.swift; sourceTree = "<group>"; };
 		8ACD6D442885D64D001CFD60 /* NotesListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesListCell.xib; sourceTree = "<group>"; };
 		8ACD6D472885D8C6001CFD60 /* NoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewController.swift; sourceTree = "<group>"; };
+		8ACD6D4A2886001E001CFD60 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
+		8ACD6D4D2886003C001CFD60 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		8ACD6D502886005F001CFD60 /* AddNewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,16 +111,14 @@
 		8ACD6D122885D5A2001CFD60 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				8ACD6D432885D64D001CFD60 /* NotesListCell.swift */,
-				8ACD6D442885D64D001CFD60 /* NotesListCell.xib */,
-				8ACD6D132885D5A2001CFD60 /* AppDelegate.swift */,
-				8ACD6D152885D5A2001CFD60 /* SceneDelegate.swift */,
-				8ACD6D172885D5A2001CFD60 /* ViewController.swift */,
-				8ACD6D192885D5A2001CFD60 /* Main.storyboard */,
-				8ACD6D1C2885D5A3001CFD60 /* Assets.xcassets */,
-				8ACD6D1E2885D5A3001CFD60 /* LaunchScreen.storyboard */,
+				8ACD6D5328860075001CFD60 /* Controllers */,
+				8ACD6D5228860070001CFD60 /* Cells */,
+				8ACD6D542886007A001CFD60 /* Views */,
+				8ACD6D4C2886002D001CFD60 /* Models */,
+				8ACD6D4928860010001CFD60 /* Managers */,
+				8ACD6D5528860091001CFD60 /* Resources */,
+				8ACD6D4F28860048001CFD60 /* Delegates */,
 				8ACD6D212885D5A3001CFD60 /* Info.plist */,
-				8ACD6D472885D8C6001CFD60 /* NoteDetailsViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -134,6 +138,67 @@
 				8ACD6D362885D5A3001CFD60 /* NotesUITestsLaunchTests.swift */,
 			);
 			path = NotesUITests;
+			sourceTree = "<group>";
+		};
+		8ACD6D4928860010001CFD60 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD6D4A2886001E001CFD60 /* NotesManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8ACD6D4C2886002D001CFD60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD6D4D2886003C001CFD60 /* Notes.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8ACD6D4F28860048001CFD60 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD6D132885D5A2001CFD60 /* AppDelegate.swift */,
+				8ACD6D152885D5A2001CFD60 /* SceneDelegate.swift */,
+				8ACD6D502886005F001CFD60 /* AddNewNote.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		8ACD6D5228860070001CFD60 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD6D432885D64D001CFD60 /* NotesListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8ACD6D5328860075001CFD60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD6D172885D5A2001CFD60 /* NotesViewController.swift */,
+				8ACD6D472885D8C6001CFD60 /* NoteDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8ACD6D542886007A001CFD60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD6D192885D5A2001CFD60 /* Main.storyboard */,
+				8ACD6D1E2885D5A3001CFD60 /* LaunchScreen.storyboard */,
+				8ACD6D442885D64D001CFD60 /* NotesListCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8ACD6D5528860091001CFD60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8ACD6D1C2885D5A3001CFD60 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +333,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ACD6D182885D5A2001CFD60 /* ViewController.swift in Sources */,
+				8ACD6D182885D5A2001CFD60 /* NotesViewController.swift in Sources */,
+				8ACD6D4E2886003C001CFD60 /* Notes.swift in Sources */,
+				8ACD6D4B2886001E001CFD60 /* NotesManager.swift in Sources */,
 				8ACD6D142885D5A2001CFD60 /* AppDelegate.swift in Sources */,
+				8ACD6D512886005F001CFD60 /* AddNewNote.swift in Sources */,
 				8ACD6D162885D5A2001CFD60 /* SceneDelegate.swift in Sources */,
 				8ACD6D482885D8C6001CFD60 /* NoteDetailsViewController.swift in Sources */,
 				8ACD6D452885D64D001CFD60 /* NotesListCell.swift in Sources */,
