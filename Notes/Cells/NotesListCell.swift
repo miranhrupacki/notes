@@ -26,7 +26,7 @@ class NotesListCell: UITableViewCell {
     
     func setCellElements(notes: Notes) {
         self.noteTitle.text = notes.noteTitle
-        self.dateOfCreation.text = notes.noteTitle
+        self.dateOfCreation.text = notes.noteDate
     }
     
 }

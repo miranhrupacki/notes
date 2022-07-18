@@ -46,8 +46,14 @@ class NoteDetailsViewController: UIViewController {
 
         let newNote = Notes(noteTitle: textfieldText, noteTextViewText: textViewText, noteDate: formattedDate)
         delegate?.addNewNote(newNote: newNote)
+        
+        
+//        NotificationCenter.default.post(name: Notification.Name(rawValue: "NEW_NOTE"), object: newNote)
+        
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
 
     func setupUI() {
         view.addSubview(noteTextfield)

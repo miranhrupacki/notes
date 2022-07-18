@@ -45,8 +45,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="dateOfCreation" destination="6Sw-fS-Wzx" id="NXj-KO-78m"/>
-                <outlet property="noteTitle" destination="IWL-Ps-ecf" id="Ogq-NL-hT2"/>
+                <outlet property="dateOfCreation" destination="6Sw-fS-Wzx" id="372-Qd-2J6"/>
+                <outlet property="noteTitle" destination="IWL-Ps-ecf" id="gOJ-FU-M5J"/>
             </connections>
             <point key="canvasLocation" x="132" y="132"/>
         </tableViewCell>
