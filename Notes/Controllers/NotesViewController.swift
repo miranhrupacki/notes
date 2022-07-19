@@ -13,7 +13,11 @@ class NotesViewController: UIViewController {
     
     var notes: [Notes] {
         get {
-            return NotesManager.shared.getNotes()
+            var localStorageNotes = NotesManager.shared.getNotes()
+            localStorageNotes.sort(by: { (s1, s2) -> Bool in
+                return s1.noteDate < s2.noteDate
+            })
+            return localStorageNotes
         }
         set {
             NotesManager.shared.setNote(notes: newValue)
