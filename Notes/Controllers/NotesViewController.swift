@@ -27,9 +27,9 @@ class NotesViewController: UIViewController {
     }
     
     @objc func createNewNotes(_ sender: Any) {
-        let noteDetailsVC = NoteDetailsViewController()
-        noteDetailsVC.delegate = self
-        self.navigationController?.pushViewController(noteDetailsVC, animated: true)
+        let addNewNoteVC = AddNewNoteViewController()
+        addNewNoteVC.delegate = self
+        self.navigationController?.pushViewController(addNewNoteVC, animated: true)
     }
 }
 
@@ -44,13 +44,34 @@ extension NotesViewController: UITableViewDataSource, UITableViewDelegate {
             cell.setCellElements(notes: notes[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsVC = NoteDetailsViewController()
+        detailsVC.note = self.notes[indexPath.row]
+        detailsVC.index = indexPath.row
+        detailsVC.delegate = self
+        self.navigationController?.pushViewController(detailsVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        notes.remove(at: indexPath.row)
+        if editingStyle == .delete {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
 
-extension NotesViewController: AddNewNote {
+extension NotesViewController: NoteManagingDelegate {
     func addNewNote(newNote: Notes) {
         DispatchQueue.main.async {
             self.notes.append(newNote)
-            NotesManager.shared.setNote(notes: self.notes)
+            self.tableView.reloadData()
+        }
+    }
+    
+    func editNote(note: Notes, index: Int) {
+        DispatchQueue.main.async {
+            NotesManager.shared.editNote(notes: note, atIndex: index)
             self.tableView.reloadData()
         }
     }

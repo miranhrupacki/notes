@@ -1,5 +1,5 @@
 //
-//  NoteDetailsViewController.swift
+//  AddNewNoteViewController.swift
 //  Notes
 //
 //  Created by Miran Hrupački on 18.07.2022..
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class NoteDetailsViewController: UIViewController {
+class AddNewNoteViewController: UIViewController {
     
-    weak var delegate: AddNewNote?
+    weak var delegate: NoteManagingDelegate?
     var newNote: Notes!
     
     var noteTextfield: UITextField = {
