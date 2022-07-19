@@ -24,15 +24,18 @@ class NotesManager {
     }
     
     func setNote(notes: [Notes]) {
-        let encoded = try? JSONEncoder().encode(notes)
-        UserDefaults.standard.set(encoded, forKey: "Note")
+        encodeNotes(notes: notes)
     }
     
     func editNote(notes: Notes, atIndex: Int) {
-        UserDefaults.standard.set(notes, forKey: "Note\(atIndex)")
+        var notesArray = getNotes()
+        notesArray[atIndex] = notes
+        
+        encodeNotes(notes: notesArray)
     }
     
-    func removeNote(atIndex: Int) {
-        UserDefaults.standard.set(nil, forKey: "Note\(atIndex)")
+    func encodeNotes(notes: [Notes]) {
+        let encoded = try? JSONEncoder().encode(notes)
+        UserDefaults.standard.set(encoded, forKey: "Note")
     }
 }
