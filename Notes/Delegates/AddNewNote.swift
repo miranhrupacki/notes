@@ -7,6 +7,8 @@
 
 import Foundation
 
-protocol AddNewNote: AnyObject {
+protocol NoteManagingDelegate: AnyObject {
     func addNewNote(newNote: Notes)
+    func editNote(note: Notes, index: Int)
+//    func removeNote(note: Notes, index: Int)
 }
