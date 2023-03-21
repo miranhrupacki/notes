@@ -28,6 +28,10 @@ class NotesViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "NotesListCell", bundle: nil), forCellReuseIdentifier: "NotesListCellIdentifier")
         self.navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createNewNotes(_:)))
+        title = "Notes"
+        navigationItem.largeTitleDisplayMode = .automatic
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     @objc func createNewNotes(_ sender: Any) {
